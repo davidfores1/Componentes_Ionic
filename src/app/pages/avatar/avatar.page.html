@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Avatar</ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/david.png">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+<ion-chip color="primary" *ngFor="let i of [1,1,1,1,1,1,1,1]">
+  <ion-avatar slot="start">
+    <img src="/assets/david.png">
+  </ion-avatar>
+  <ion-label>David Forero</ion-label>
+</ion-chip>
+
+  <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1]">
+     <ion-avatar slot="start">
+       <img src="/assets/david.png">
+     </ion-avatar>
+     <ion-label>David Forero</ion-label>
+  </ion-item>
+</ion-content>

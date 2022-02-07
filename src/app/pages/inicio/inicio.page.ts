@@ -21,6 +21,13 @@ export class InicioPage implements OnInit {
       name: 'Alert',
       redirecTo: '/alert'
     }
+    ,
+
+    {
+      icon: 'beaker',
+      name: 'Avatar',
+      redirecTo: '/avatar'
+    }
   ]
 
   ngOnInit() {
