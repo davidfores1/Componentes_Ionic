@@ -15,18 +15,21 @@ export class InicioPage implements OnInit {
       name: 'Action Sheet',
       redirecTo: '/action-sheet'
     },
-
     {
       icon: 'storefront-outline',
       name: 'Alert',
       redirecTo: '/alert'
     }
     ,
-
     {
       icon: 'beaker',
       name: 'Avatar',
       redirecTo: '/avatar'
+    },
+    {
+      icon: 'radio-button-on',
+      name: 'Botones y router',
+      redirecTo: '/botones'
     }
   ]
 
