@@ -1,5 +1,12 @@
-<app-header titulo="Aler 2"></app-header>
+<app-header [titulo]="titulo || 'Alert Page'"></app-header>
 
 <ion-content>
-    <h1>alert</h1>
+  <ion-button expand="full" color="primary" (click)="presentAlert()">
+    Mostar Alerta
+  </ion-button>
+
+  <ion-button expand="full" color="secondary" (click)="presentAlertPrompt()">
+    Mostar input
+  </ion-button>
+
 </ion-content>
