@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-inicio',
@@ -55,6 +55,11 @@ export class InicioPage implements OnInit {
       icon: 'grid',
       name: 'Grid - row',
       redirecTo: '/grid'
+    },
+    {
+      icon: 'infinite',
+      name: 'Infinite Scroll',
+      redirecTo: '/infinite-scroll'
     }
   ]
 
