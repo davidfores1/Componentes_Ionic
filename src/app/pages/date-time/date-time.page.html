@@ -14,6 +14,18 @@
                     (ionChange)="cambioFecha($event)">
      </ion-datetime>
     </ion-item>
+
+    <ion-list-header>
+      <ion-label>Restrincciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Min y max</ion-label>
+      <ion-datetime value="2015-01-01" min="2015-01-01" max="2015-12-31"
+        displayFormat="yyyy-mm-dd">
+      </ion-datetime>
+    </ion-item>
+
   </ion-list>
 </ion-content>
  
