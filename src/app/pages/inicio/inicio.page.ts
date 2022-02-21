@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inicio',
@@ -7,7 +8,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  constructor(private menuCtrl: MenuController) { }
 
   componentes: Componente[] = [
     {
@@ -85,6 +86,10 @@ export class InicioPage implements OnInit {
 
   ngOnInit() {
   }
+
+  // toggleMenu(){
+  //  this.menuCtrl.toggle();
+  // }
 
 }
 
