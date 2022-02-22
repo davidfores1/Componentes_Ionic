@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { Componente } from 'src/app/interfaces/interfaces';
+import { Observable } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,93 +11,19 @@ import { MenuController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
 
-  constructor(private menuCtrl: MenuController) { }
+  constructor(private menuCtrl: MenuController, private dataservice:DataService) { }
 
-  componentes: Componente[] = [
-    {
-      icon: 'american-football',
-      name: 'Action Sheet',
-      redirecTo: '/action-sheet'
-    },
-    {
-      icon: 'storefront-outline',
-      name: 'Alert',
-      redirecTo: '/alert'
-    }
-    ,
-    {
-      icon: 'beaker',
-      name: 'Avatar',
-      redirecTo: '/avatar'
-    },
-    {
-      icon: 'radio-button-on',
-      name: 'Botones y router',
-      redirecTo: '/botones'
-    },
-    {
-      icon: 'card',
-      name: 'Cards',
-      redirecTo: '/card'
-    },
-    {
-      icon: 'checkmark-circle-outline',
-      name: 'Checkbox',
-      redirecTo: '/check'
-    },
-    {
-      icon: 'calendar',
-      name: 'DateTime',
-      redirecTo: '/date-time'
-    },
-    {
-      icon: 'car',
-      name: 'Fabs',
-      redirecTo: '/fab'
-    },
-    {
-      icon: 'grid',
-      name: 'Grid - row',
-      redirecTo: '/grid'
-    },
-    {
-      icon: 'infinite',
-      name: 'Infinite Scroll',
-      redirecTo: '/infinite-scroll'
-    },
-    {
-      icon: 'hammer',
-      name: 'Input - forms',
-      redirecTo: '/input'
-    },
-    {
-      icon: 'list',
-      name: 'Listas - Sliding',
-      redirecTo: '/list'
-    },
-    {
-      icon: 'list',
-      name: 'Listas - Reorder',
-      redirecTo: '/reorder'
-    },
-    {
-      icon: 'refresh-circle',
-      name: 'Loading',
-      redirecTo: '/loading'
-    }
-  ]
+  componentes: Observable<Componente[]>
 
   ngOnInit() {
+  
+    this.componentes = this.dataservice.getMenuOpts();
+  
   }
 
   // toggleMenu(){
   //  this.menuCtrl.toggle();
   // }
 
-}
 
-interface Componente{
-  icon: string,
-  name: string,
-  redirecTo:string
-} 
+}
